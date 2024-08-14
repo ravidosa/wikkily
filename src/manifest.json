@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "wikkily",
+    "version": "1.0",
+  
+    "description": "Maps link surfing on Wikipedia.",
+    "icons": {
+        "48": "icon.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*.wikipedia.org/wiki/*"],
+        "js": ["wikkily.js"]
+      }
+    ],
+    "permissions": ["contextMenus"],
+    "browser_action": {
+        "default_title": "wikkily"
+    },
+    "background": {
+        "scripts": ["background.js"]
+    }
+  }
